@@ -8,4 +8,10 @@ class blog(models.Model):
     tophead = models.TextField(max_length=100)
     Date = models.DateTimeField(default=timezone.now)
     blogimage = models.ImageField(upload_to='images/')
-    blogtext = models.TextField(max_length=200)
+    blogtext = models.TextField()
+
+    def __str__(self):
+        return self.tophead
+
+    def text(self):
+        return self.blogtext[:100]
