@@ -82,7 +82,7 @@
               href="{% static 'CHEPURI RAJENDER (6).pdf '%}"
               >Resume</a
             >
-            <a class="nav-link text-dark" href="#">Jobs</a>
+            <a class="nav-link text-dark" href="#">Internships</a>
             <a class="nav-link text-dark" href="{% url 'allblogs' %}">Blog</a>
           </div>
         </div>
@@ -96,6 +96,12 @@
       >
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
+            <img
+              src="{% static 'IMG_20181217_023319_232-01.jpeg'%}"
+              height="400"
+              width="350"
+              alt=""
+            />
             <h1 class="fw-bold text-warning py-3">Hi,I'm Rajender</h1>
             <p class="lead text-default">
               Hey,my name is chepuri Rajender and I am very excited to work on
@@ -109,12 +115,6 @@
                 >Email Me</a
               >
             </p>
-            <img
-              src="{% static 'IMG_20181217_023319_232-01.jpeg'%}"
-              height="300"
-              width="200"
-              alt=""
-            />
           </div>
         </div>
       </section>
@@ -125,6 +125,9 @@
             {% for job in jobs.all %}
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
+                <h3 class="text-center py-5 bg-dark text-white">
+                  {{ job.header }}
+                </h3>
                 <img class="card-img-top" src="{{ job.image.url }}" />
                 <div class="card-body">
                   <p class="card-text">{{ job.text }}</p>
@@ -140,6 +143,7 @@
     <footer class="text-secondary py-5">
       <div class="container text-center">
         <p>©chepuriRajender{% now 'Y'%}</p>
+        <p>contact-me:8790089597</p>
       </div>
     </footer>
 
